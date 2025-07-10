@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduPilot Dashboard</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: #eef6fb;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #00aaff;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .language-select {
+      font-size: 1rem;
+      padding: 0.3rem;
+      border-radius: 5px;
+    }
+    .dashboard {
+      padding: 2rem;
+    }
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+    }
+    .subject-tile {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .subject-tile:hover {
+      transform: scale(1.05);
+      background-color: #dff3ff;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      background-color: #d9f0ff;
+      font-size: 0.9rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EduPilot 🧠</h1>
+    <select class="language-select" id="language">
+      <option value="en">English</option>
+      <option value="zu">isiZulu</option>
+      <option value="af">Afrikaans</option>
+      <option value="xh">isiXhosa</option>
+      <option value="st">Sesotho</option>
+    </select>
+  </header>
+
+  <div class="dashboard">
+    <h2>Hello, what would you like help with today? ✨</h2>
+    <div class="subject-grid">
+      <a class="subject-tile" href="math.html">📐 Math</a>
+      <a class="subject-tile" href="science.html">🔬 Science</a>
+      <a class="subject-tile" href="language.html">📖 Language</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    EduPilot is free for all learners. Helping you learn smarter, faster, and in your language. 💙
+  </div>
+</body>
+</html>
